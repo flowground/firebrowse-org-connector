@@ -1,0 +1,140 @@
+{
+    "type": "object",
+    "properties": {
+        "format": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "json",
+                "tsv",
+                "csv"
+            ],
+            "default": "json"
+        },
+        "mir": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "cohort": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "enum": [
+                    "ACC",
+                    "BLCA",
+                    "BRCA",
+                    "CESC",
+                    "CHOL",
+                    "COAD",
+                    "COADREAD",
+                    "DLBC",
+                    "ESCA",
+                    "FPPP",
+                    "GBM",
+                    "GBMLGG",
+                    "HNSC",
+                    "KICH",
+                    "KIPAN",
+                    "KIRC",
+                    "KIRP",
+                    "LAML",
+                    "LGG",
+                    "LIHC",
+                    "LUAD",
+                    "LUSC",
+                    "MESO",
+                    "OV",
+                    "PAAD",
+                    "PCPG",
+                    "PRAD",
+                    "READ",
+                    "SARC",
+                    "SKCM",
+                    "STAD",
+                    "STES",
+                    "TGCT",
+                    "THCA",
+                    "THYM",
+                    "UCEC",
+                    "UCS",
+                    "UVM"
+                ],
+                "type": "string"
+            }
+        },
+        "tcga_participant_barcode": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "tool": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "default": "miRseq_Mature_Preprocess",
+                "enum": [
+                    "miRseq_Mature_Preprocess",
+                    "miRseq_Preprocess"
+                ],
+                "type": "string"
+            }
+        },
+        "sample_type": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "enum": [
+                    "NB",
+                    "NBC",
+                    "NBM",
+                    "NT",
+                    "TAM",
+                    "TAP",
+                    "TB",
+                    "TM",
+                    "TP",
+                    "TR"
+                ],
+                "type": "string"
+            }
+        },
+        "page": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "default": 1,
+                "format": "int32",
+                "minimum": 1,
+                "type": "integer"
+            }
+        },
+        "page_size": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "default": 250,
+                "format": "int32",
+                "maximum": 2000,
+                "minimum": 1,
+                "type": "integer"
+            }
+        },
+        "sort_by": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "tcga_participant_barcode",
+                "cohort",
+                "tool",
+                "mir",
+                "sample_type"
+            ],
+            "default": "cohort"
+        }
+    }
+}

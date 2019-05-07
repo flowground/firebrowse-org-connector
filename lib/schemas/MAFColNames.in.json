@@ -1,0 +1,15 @@
+{
+    "type": "object",
+    "properties": {
+        "format": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "json",
+                "tsv",
+                "csv"
+            ],
+            "default": "json"
+        }
+    }
+}

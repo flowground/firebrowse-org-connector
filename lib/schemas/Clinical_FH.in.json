@@ -1,0 +1,174 @@
+{
+    "type": "object",
+    "properties": {
+        "format": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "json",
+                "tsv",
+                "csv"
+            ],
+            "default": "json"
+        },
+        "cohort": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "enum": [
+                    "ACC",
+                    "BLCA",
+                    "BRCA",
+                    "CESC",
+                    "CHOL",
+                    "COAD",
+                    "COADREAD",
+                    "DLBC",
+                    "ESCA",
+                    "FPPP",
+                    "GBM",
+                    "GBMLGG",
+                    "HNSC",
+                    "KICH",
+                    "KIPAN",
+                    "KIRC",
+                    "KIRP",
+                    "LAML",
+                    "LGG",
+                    "LIHC",
+                    "LUAD",
+                    "LUSC",
+                    "MESO",
+                    "OV",
+                    "PAAD",
+                    "PCPG",
+                    "PRAD",
+                    "READ",
+                    "SARC",
+                    "SKCM",
+                    "STAD",
+                    "STES",
+                    "TGCT",
+                    "THCA",
+                    "THYM",
+                    "UCEC",
+                    "UCS",
+                    "UVM"
+                ],
+                "type": "string"
+            }
+        },
+        "tcga_participant_barcode": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "fh_cde_name": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "enum": [
+                    "age_at_diagnosis",
+                    "age_began_smoking_in_years",
+                    "Breslow_thickness",
+                    "cause_of_death",
+                    "cervical_carcinoma_pelvic_extension_text",
+                    "cervix_suv_results",
+                    "chemo_concurrent_type",
+                    "clinical_stage",
+                    "corpus_involvement",
+                    "date_of_initial_pathologic_diagnosis",
+                    "days_to_death",
+                    "days_to_last_followup",
+                    "days_to_last_known_alive",
+                    "days_to_psa",
+                    "days_to_submitted_specimen_dx",
+                    "ethnicity",
+                    "extrathyroidal_extension",
+                    "gender",
+                    "gleason_score",
+                    "height_cm_at_diagnosis",
+                    "histological_type",
+                    "history_hormonal_contraceptives_use",
+                    "hysterectomy_type",
+                    "initial_pathologic_dx_year",
+                    "karnofsky_performance_score",
+                    "keratinization_squamous_cell",
+                    "lymph_node_location",
+                    "lymph_nodes_examined",
+                    "lymph_nodes_examined_he_count",
+                    "lymphovascular_involvement",
+                    "melanoma_primary_known",
+                    "melanoma_ulceration",
+                    "menopause_status",
+                    "multifocality",
+                    "neoplasm_histologic_grade",
+                    "number_of_lymph_nodes",
+                    "number_pack_years_smoked",
+                    "pathologic_stage",
+                    "pathology_M_stage",
+                    "pathology_N_stage",
+                    "pathology_T_stage",
+                    "pos_lymph_node_location",
+                    "pregnancies_count_ectopic",
+                    "pregnancies_count_live_birth",
+                    "pregnancies_count_stillbirth",
+                    "pregnancies_count_total",
+                    "pregnancy_spontaneous_abortion_count",
+                    "pregnancy_therapeutic_abortion_count",
+                    "psa_value",
+                    "race",
+                    "radiation_exposure",
+                    "radiation_therapy",
+                    "radiation_therapy_status",
+                    "residual_tumor",
+                    "tobacco_smoking_history",
+                    "tobacco_smoking_pack_years_smoked",
+                    "tobacco_smoking_year_stopped",
+                    "tumor_size",
+                    "tumor_stage",
+                    "tumor_status",
+                    "tumor_tissue_site",
+                    "vital_status",
+                    "weight_kg_at_diagnosis",
+                    "year_of_tobacco_smoking_onset",
+                    "years_to_birth"
+                ],
+                "type": "string"
+            }
+        },
+        "page": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "default": 1,
+                "format": "int32",
+                "minimum": 1,
+                "type": "integer"
+            }
+        },
+        "page_size": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "default": 250,
+                "format": "int32",
+                "maximum": 2000,
+                "minimum": 1,
+                "type": "integer"
+            }
+        },
+        "sort_by": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "tcga_participant_barcode",
+                "cohort",
+                "fh_cde_name"
+            ],
+            "default": "cohort"
+        }
+    }
+}

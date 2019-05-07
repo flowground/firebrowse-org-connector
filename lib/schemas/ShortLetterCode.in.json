@@ -1,0 +1,43 @@
+{
+    "type": "object",
+    "properties": {
+        "format": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "json",
+                "tsv",
+                "csv"
+            ],
+            "default": "json"
+        },
+        "short_letter_code": {
+            "required": true,
+            "type": "array",
+            "items": {
+                "enum": [
+                    "TP",
+                    "TB",
+                    "TAM",
+                    "TBM",
+                    "NBC",
+                    "CELLC",
+                    "TRB",
+                    "TR",
+                    "TRBM",
+                    "TAP",
+                    "TM",
+                    "THOC",
+                    "NB",
+                    "NT",
+                    "NEBV",
+                    "NBM",
+                    "CELL",
+                    "XP",
+                    "XCL"
+                ],
+                "type": "string"
+            }
+        }
+    }
+}

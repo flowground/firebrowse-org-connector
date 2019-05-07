@@ -1,0 +1,107 @@
+{
+    "type": "object",
+    "properties": {
+        "format": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "json",
+                "tsv",
+                "csv"
+            ],
+            "default": "json"
+        },
+        "cohort": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "enum": [
+                    "ACC",
+                    "BLCA",
+                    "BRCA",
+                    "CESC",
+                    "CHOL",
+                    "COAD",
+                    "COADREAD",
+                    "DLBC",
+                    "ESCA",
+                    "FPPP",
+                    "GBM",
+                    "GBMLGG",
+                    "HNSC",
+                    "KICH",
+                    "KIPAN",
+                    "KIRC",
+                    "KIRP",
+                    "LAML",
+                    "LGG",
+                    "LIHC",
+                    "LUAD",
+                    "LUSC",
+                    "MESO",
+                    "OV",
+                    "PAAD",
+                    "PCPG",
+                    "PRAD",
+                    "READ",
+                    "SARC",
+                    "SKCM",
+                    "STAD",
+                    "STES",
+                    "TGCT",
+                    "THCA",
+                    "THYM",
+                    "UCEC",
+                    "UCS",
+                    "UVM"
+                ],
+                "type": "string"
+            }
+        },
+        "tcga_participant_barcode": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "cde_name": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "page": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "default": 1,
+                "format": "int32",
+                "minimum": 1,
+                "type": "integer"
+            }
+        },
+        "page_size": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "default": 150,
+                "format": "int32",
+                "maximum": 2000,
+                "minimum": 1,
+                "type": "integer"
+            }
+        },
+        "sort_by": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "tcga_participant_barcode",
+                "cohort",
+                "cde_name"
+            ],
+            "default": "cohort"
+        }
+    }
+}

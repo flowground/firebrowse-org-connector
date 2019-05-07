@@ -1,0 +1,205 @@
+{
+    "type": "object",
+    "properties": {
+        "format": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "json",
+                "tsv",
+                "csv"
+            ],
+            "default": "json"
+        },
+        "date": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "enum": [
+                    "2016_01_28",
+                    "2015_08_21",
+                    "2015_04_02",
+                    "2014_10_17",
+                    "2014_07_15",
+                    "2014_04_16",
+                    "2014_01_15",
+                    "2013_09_23",
+                    "2013_05_23",
+                    "2013_04_21"
+                ],
+                "format": "date",
+                "type": "string"
+            }
+        },
+        "cohort": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "enum": [
+                    "ACC",
+                    "BLCA",
+                    "BRCA",
+                    "CESC",
+                    "CHOL",
+                    "COAD",
+                    "COADREAD",
+                    "DLBC",
+                    "ESCA",
+                    "FPPP",
+                    "GBM",
+                    "GBMLGG",
+                    "HNSC",
+                    "KICH",
+                    "KIPAN",
+                    "KIRC",
+                    "KIRP",
+                    "LAML",
+                    "LGG",
+                    "LIHC",
+                    "LUAD",
+                    "LUSC",
+                    "MESO",
+                    "OV",
+                    "PAAD",
+                    "PCPG",
+                    "PRAD",
+                    "READ",
+                    "SARC",
+                    "SKCM",
+                    "STAD",
+                    "STES",
+                    "TGCT",
+                    "THCA",
+                    "THYM",
+                    "UCEC",
+                    "UCS",
+                    "UVM"
+                ],
+                "type": "string"
+            }
+        },
+        "name": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "enum": [
+                    "Aggregate_AnalysisFeatures",
+                    "CopyNumber_Clustering_CNMF",
+                    "CopyNumber_Clustering_CNMF_thresholded",
+                    "CopyNumber_Gistic2",
+                    "CopyNumberLowPass_Gistic2",
+                    "Correlate_Clinical_vs_CopyNumber_Arm",
+                    "Correlate_Clinical_vs_CopyNumber_Focal",
+                    "Correlate_Clinical_vs_Methylation",
+                    "Correlate_Clinical_vs_miR",
+                    "Correlate_Clinical_vs_miRseq",
+                    "Correlate_Clinical_vs_Molecular_Subtypes",
+                    "Correlate_Clinical_vs_mRNA",
+                    "Correlate_Clinical_vs_mRNAseq",
+                    "Correlate_Clinical_vs_Mutation",
+                    "Correlate_Clinical_vs_Mutation_APOBEC_Categorical",
+                    "Correlate_Clinical_vs_Mutation_APOBEC_Continuous",
+                    "Correlate_Clinical_vs_MutationRate",
+                    "Correlate_Clinical_vs_RPPA",
+                    "Correlate_CopyNumber_vs_miR",
+                    "Correlate_CopyNumber_vs_mRNA",
+                    "Correlate_CopyNumber_vs_mRNAseq",
+                    "Correlate_Methylation_vs_mRNA",
+                    "Correlate_molecularSubtype_vs_CopyNumber_Arm",
+                    "Correlate_molecularSubtype_vs_CopyNumber_Focal",
+                    "Correlate_molecularSubtype_vs_Mutation",
+                    "Correlate_mRNAseq_vs_Mutation_APOBEC",
+                    "Methylation_Clustering_CNMF",
+                    "miR_Clustering_CNMF",
+                    "miR_Clustering_Consensus",
+                    "miR_Clustering_Consensus_Plus",
+                    "miR_FindDirectTargets",
+                    "miRseq_Clustering_CNMF",
+                    "miRseq_Clustering_Consensus",
+                    "miRseq_Clustering_Consensus_Plus",
+                    "miRseq_FindDirectTargets",
+                    "miRseq_Mature_Clustering_CNMF",
+                    "miRseq_Mature_Clustering_Consensus",
+                    "miRseq_Mature_Clustering_Consensus_Plus",
+                    "mRNA_Clustering_CNMF",
+                    "mRNA_Clustering_Consensus",
+                    "mRNA_Clustering_Consensus_Plus",
+                    "mRNAseq_Clustering_CNMF",
+                    "mRNAseq_Clustering_Consensus",
+                    "mRNAseq_Clustering_Consensus_Plus",
+                    "Mutation_APOBEC",
+                    "Mutation_Assessor",
+                    "Mutation_CHASM",
+                    "MutSig2.0",
+                    "MutSig2CV",
+                    "MutSigCV",
+                    "MutSigNozzleReport1.5",
+                    "MutSigNozzleReport2.0",
+                    "MutSigNozzleReport2CV",
+                    "MutSigNozzleReportCV",
+                    "MutSigNozzleReportMerged",
+                    "Pathway_FindEnrichedGenes",
+                    "Pathway_GSEA_mRNAseq",
+                    "Pathway_Hotnet",
+                    "Pathway_Overlaps_MSigDB_MutSig2CV",
+                    "Pathway_Paradigm_mRNA",
+                    "Pathway_Paradigm_mRNA_And_Copy_Number",
+                    "Pathway_Paradigm_RNASeq",
+                    "Pathway_Paradigm_RNASeq_And_Copy_Number",
+                    "RPPA_Clustering_CNMF",
+                    "RPPA_Clustering_Consensus",
+                    "RPPA_Clustering_Consensus_Plus"
+                ],
+                "type": "string"
+            }
+        },
+        "type": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "enum": [
+                    "Aggregate",
+                    "Clustering",
+                    "CopyNumber",
+                    "Correlations",
+                    "Expression",
+                    "Mutation",
+                    "Pathway"
+                ],
+                "type": "string"
+            }
+        },
+        "page": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "default": 1,
+                "format": "int32",
+                "minimum": 1,
+                "type": "integer"
+            }
+        },
+        "page_size": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "default": 250,
+                "format": "int32",
+                "maximum": 2000,
+                "minimum": 1,
+                "type": "integer"
+            }
+        },
+        "sort_by": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "date",
+                "cohort",
+                "type",
+                "name"
+            ],
+            "default": "date"
+        }
+    }
+}
